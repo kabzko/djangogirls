@@ -28,7 +28,7 @@ SECRET_KEY = 'django-insecure-_&z+t(j0bv=%5*tnm2dh1038w)2sf7bkt%8w+_@n^hgm7)(g4u
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = []
 
 
 # Application definition
@@ -80,14 +80,11 @@ WSGI_APPLICATION = 'djangogirls.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'djangogirls',
-        'USER': 'root',
-        'PASSWORD': '123',
-        'HOST': 'localhost',
-        'PORT': '',
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': str(BASE_DIR / 'db.sqlite3'),
     }
 }
+
 
 # Password validation
 # https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators
